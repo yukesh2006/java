@@ -1,0 +1,201 @@
+package ababd;
+
+// poly morphism
+//method overloading
+// method overriding
+
+public class Dmeo {
+	void m1() {
+		System.out.println("sdfa");
+	}
+	void m1(int a) {
+		System.out.println("dfasdfasdfasfas");
+	}
+	public static void main(String[] args) {
+		Dmeo test = new Dmeo();// object
+		test.m1();
+		test.m1(3);
+	}
+}
+
+
+--------------------------------
+
+
+package ababd;
+
+// poly morphism
+//method overloading
+// method overriding
+
+public class Dmeo {
+	void minbal() {
+		System.out.println("sdfa");
+	}
+	void minbal(int a) {
+	
+		System.out.println("dfasdfasdfasfas");
+	}
+	public static void main(String[] args) {
+		Dmeo test = new Dmeo();// object
+		test.m1();
+		test.m2(3);
+	}
+}
+--------------------------
+
+package ababd;
+
+// poly morphism
+//method overloading
+// method overriding
+
+
+class Parents
+{
+   void property()
+   {
+	   System.out.println("Property");
+   }
+   void marry()
+   {
+	   System.out.println("famaily selected girl/boy");
+   }
+}
+public class Dmeo extends Parents {
+	void marry()
+	{
+		System.out.println("campus selected girl/boy");
+	}
+	public static void main(String[] args) {
+		Dmeo test = new Dmeo();// object
+		test.marry();
+		test.property();
+	
+	}
+}
+
+--------------------------------
+
+
+public class Test {
+	int a = 20;
+
+	void m1(int b) {
+		System.out.println("dfasdf "+b);
+		System.out.println("dfasdf "+a);
+	}
+
+	public static void main(String[] args) {
+		Test   vv = new Test();
+		vv.m1(4);
+	}
+}
+
+-------------------
+
+
+public class Test {
+	int a = 20;
+	int b = 10;
+
+	void m1(int c,int d) {
+		System.out.println("dfasdf "+(a+b));
+	System.out.println("asdfas"+(c+d));
+	}
+
+	public static void main(String[] args) {
+		Test   vv = new Test();
+		vv.m1(4,3);
+	}
+}
+-----------------------------------
+
+
+
+public class Test {
+	int a = 20;
+	int b = 10;
+
+	void m1(int a,int b ) {
+		System.out.println("asdfas"+(this.a+this.b));
+
+		System.out.println("dfasdf "+(a+b));
+//		System.out.println("dfasdf "+(c+d));
+	}
+
+	public static void main(String[] args) {
+		Test   vv = new Test();
+		vv.m1(4,3);
+	}
+}
+
+--------
+
+
+public class Test {
+	int a ;
+	int b ;
+
+	void m1(int c,int d ) {
+	 a=c;
+	 b=d;
+	}
+	void m2() {
+	 System.out.println(a+b);
+	}
+
+	public static void main(String[] args) {
+		Test   vv = new Test();
+		vv.m1(4,3);
+		vv.m2();
+	}
+}
+-------------------
+
+
+public class Test {
+	int a;
+	int b;
+
+	void m1(int a, int b) {
+		this.a = a;
+		this.b = b;
+	}
+
+	void m2() {
+		System.out.println(a + b);
+	}
+
+	public static void main(String[] args) {
+		Test vv = new Test();
+		vv.m1(4, 3);
+		vv.m2();
+	}
+}
+-------------------------
+
+package ababd;
+
+class Parents {
+	private int a;
+
+	public int getA() {
+		return a;
+	}
+
+	public void setA(int a) {
+		this.a = a;
+	}
+
+}
+
+public class Dmeo extends Parents {
+
+	public static void main(String[] args) {
+		Dmeo test = new Dmeo();// object
+		test.setA(11);
+		int aa = test.getA();
+		System.out.println(aa);
+	}
+}
