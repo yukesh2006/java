@@ -31,7 +31,10 @@ public class Employee_details_03 {
 					
 					System.out.println("Enter the age of Employee:");
 					emp.age=sc.nextByte();
-					if(emp.age<18)
+					if(emp.age<18 || emp.age>60) {
+						System.out.println("Not Valid!");
+					}while(emp.age<18||emp.age>60);
+					sc.nextLine();
 					System.out.println("Enter the Designation of Employee(P/M/T):");
 					emp.Designation=sc.next();
 					System.out.println("\n=====Employee Details Created Successfully====\n");
